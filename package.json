@@ -21,7 +21,7 @@
   },
   "sideEffects": false,
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && mv index.js index.mjs && tsc --module CommonJS",
     "clean": "rimraf index.js index.d.ts",
     "test": "jest"
   },
@@ -46,6 +46,7 @@
     "@types/jest": "^29.5.12",
     "@types/react": "^18.3.1",
     "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.7",
     "ts-jest": "^29.1.2",

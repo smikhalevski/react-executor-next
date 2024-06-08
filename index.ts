@@ -4,14 +4,14 @@ import { useExecutorManager } from 'react-executor';
 import { SSRExecutorManager } from 'react-executor/ssr';
 
 export function ExecutorHydrator(props: { children?: ReactNode }): ReactNode {
-  const executorManager = useExecutorManager();
+  const manager = useExecutorManager();
 
   useServerInsertedHTML(() => {
-    if (executorManager instanceof SSRExecutorManager) {
-      const source = executorManager.nextHydrationScript();
+    if (manager instanceof SSRExecutorManager) {
+      const source = manager.nextHydrationScript();
 
       if (source !== '') {
-        return createElement('script', { nonce: executorManager.nonce, dangerouslySetInnerHTML: source });
+        return createElement('script', { nonce: manager.nonce, dangerouslySetInnerHTML: { __html: source } });
       }
     }
   });
