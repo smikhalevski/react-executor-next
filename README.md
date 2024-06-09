@@ -1,5 +1,7 @@
 # @react-executor/next
 
+🔥&ensp;[Check out the live example!](https://codesandbox.io/p/devbox/react-executor-next-example-whsj4v)
+
 To enable data streaming for Next.js applications provide
 an [`ExecutorManager`](https://smikhalevski.github.io/react-executor/classes/react_executor.ExecutorManager.html):
 
