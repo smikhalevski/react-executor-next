@@ -1,7 +1,7 @@
 # @react-executor/next
 
 To enable data streaming for Next.js applications provide
-an [`ExecutorManager`](https://smikhalevski.github.io/react-executor/classes/react_executor.ExecutorManager.html)
+an [`ExecutorManager`](https://smikhalevski.github.io/react-executor/classes/react_executor.ExecutorManager.html):
 
 ```tsx
 // providers.tsx

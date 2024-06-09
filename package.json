@@ -6,8 +6,9 @@
   "module": "./index.mjs",
   "types": "./index.d.ts",
   "files": [
-    "index.js",
     "index.d.ts",
+    "index.mjs",
+    "index.js",
     "LICENSE.txt",
     "README.md"
   ],
@@ -22,7 +23,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "tsc && mv index.js index.mjs && tsc --module CommonJS",
-    "clean": "rimraf index.js index.d.ts",
+    "clean": "rimraf index.d.ts index.mjs index.js",
     "test": "jest"
   },
   "repository": {
@@ -55,6 +56,6 @@
   "peerDependencies": {
     "next": ">=13.0.0",
     "react": ">=16.8.0",
-    "react-executor": ">=0.0.13"
+    "react-executor": ">=0.0.15"
   }
 }
